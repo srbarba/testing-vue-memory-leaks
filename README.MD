@@ -38,7 +38,7 @@ For testing we use:
 
 - jest
 - babel-jest
-- babel-core
+- babel-core (required by vue-jest)
 - @babel/preset-typescript
 - vue-jest
 - @vue/test-utils
