@@ -1,0 +1,7 @@
+{
+  "semi": false,
+  "arrowParens": "always",
+  "singleQuote": true,
+  "quoteProps": "consistent",
+  "jsxBracketSameLine": true
+}
