@@ -1,9 +1,9 @@
-import { mountWithVuetify } from '../mountWithVuetify'
+import { mountWithVuetify, renderWithVuetify } from '../withVuetifyUtils'
 import ComponentVueJs from '../../src/ComponentVueJs.vue'
 
 describe('ComponentVueJs', () => {
   it('renders correctly', () => {
-    const wrapper = mountWithVuetify(ComponentVueJs)
+    const wrapper = renderWithVuetify(ComponentVueJs)
     expect(wrapper.html()).toMatchSnapshot()
   })
 

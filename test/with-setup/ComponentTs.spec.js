@@ -1,14 +1,14 @@
-import { mountWithVuetify } from '../mountWithVuetify'
-import ComponentJs from '../../src/ComponentJs'
+import { mountWithVuetify } from '../withVuetifyUtils'
+import ComponentTs from '../../src/ComponentTs'
 
-describe('ComponentJs', () => {
+describe('ComponentTs', () => {
   it('renders correctly', () => {
-    const wrapper = mountWithVuetify(ComponentJs)
+    const wrapper = mountWithVuetify(ComponentTs)
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('renders correctly with props', () => {
-    const wrapper = mountWithVuetify(ComponentJs, {
+    const wrapper = mountWithVuetify(ComponentTs, {
       propsData: {
         text: 'My dummy Component',
       },

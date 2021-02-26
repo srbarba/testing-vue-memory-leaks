@@ -6,9 +6,9 @@ This repo is to try to reproduce and identify memory leaks in our original proje
 
 ## Current example
 
-In master branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with no more than `vue` and `typescript`.
+In this branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with `vue`, `typescript` and `vuetify`.
 
-You can execute the scripts in `package.json` to check that everything works fine and there is no memory leaks with this example.
+You can execute the scripts in `package.json` to check there are no memory leaks.
 
 You can execute separated scripts like:
 
@@ -27,12 +27,21 @@ Or you can execute all together with:
 yarn test:leaks
 ```
 
+## 🤔 Did you get memory leak in ComponentTs? 🔥🔥🔥
+
+We found that `test/testing-library/ComponentTs.spec.js` fails in memory leak error in arbitrary way.
+
+It was happening about 1 of 30 to 100 executions. It was impossible to determine a realistic way to analyze it.
+
+We will try in other environments to check if it happens more consistently.
+
 ## Technologies involved
 
 In production code we have:
 
 - typescript
 - vue
+- vuetify
 
 For testing we use:
 
@@ -50,5 +59,6 @@ For testing we use:
 You can check the rest of branches with different examples
 
 - example/basic-example-with_ts-jest
+- example/basic-example-with_vuetify
 
 > 📝 Remember to execute yarn before tests to update dependencies!

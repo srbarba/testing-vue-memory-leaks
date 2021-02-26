@@ -1,5 +1,5 @@
 <template>
-  <div>{{ text }}</div>
+  <v-card>{{ text }}</v-card>
 </template>
 
 <script>

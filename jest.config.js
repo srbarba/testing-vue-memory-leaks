@@ -8,6 +8,7 @@ module.exports = {
         '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
         '.*\\.(vue)$': 'vue-jest',
       },
+      snapshotSerializers: ['jest-serializer-vue'],
     },
     {
       displayName: 'test-utils',
@@ -16,6 +17,17 @@ module.exports = {
         '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
         '.*\\.(vue)$': 'vue-jest',
       },
+      snapshotSerializers: ['jest-serializer-vue'],
+    },
+    {
+      displayName: 'with-setup',
+      testMatch: ['<rootDir>/test/with-setup/**/.spec.js'],
+      transform: {
+        '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+        '.*\\.(vue)$': 'vue-jest',
+      },
+      snapshotSerializers: ['jest-serializer-vue'],
+      setupFiles: ['./jest.setup.js'],
     },
   ],
   moduleFileExtensions: ['ts', 'js', 'vue', 'json', 'yaml'],

@@ -1,14 +1,14 @@
-import { mountWithVuetify } from '../mountWithVuetify'
+import { render } from '@testing-library/vue'
 import ComponentVueTs from '../../src/ComponentVueTs.vue'
 
 describe('ComponentVueTs', () => {
   it('renders correctly', () => {
-    const wrapper = mountWithVuetify(ComponentVueTs)
+    const wrapper = render(ComponentVueTs)
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('renders correctly with props', () => {
-    const wrapper = mountWithVuetify(ComponentVueTs, {
+    const wrapper = render(ComponentVueTs, {
       propsData: {
         text: 'My dummy Component',
       },

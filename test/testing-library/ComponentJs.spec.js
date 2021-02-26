@@ -1,14 +1,14 @@
-import { render } from '@testing-library/vue'
+import { renderWithVuetify } from '../renderWithVuetify'
 import ComponentJs from '../../src/ComponentJs'
 
 describe('ComponentJs', () => {
   it('renders correctly', () => {
-    const wrapper = render(ComponentJs)
+    const wrapper = renderWithVuetify(ComponentJs)
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('renders correctly with props', () => {
-    const wrapper = render(ComponentJs, {
+    const wrapper = renderWithVuetify(ComponentJs, {
       propsData: {
         text: 'My dummy Component',
       },
