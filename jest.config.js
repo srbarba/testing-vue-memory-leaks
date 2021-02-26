@@ -5,16 +5,18 @@ module.exports = {
       displayName: 'testing-library',
       testMatch: ['<rootDir>/test/testing-library/**/.spec.js'],
       transform: {
-        '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
-        '.*\\.(vue)$': 'vue-jest',
+        '^.+\\.ts$': 'ts-jest',
+        '^.+\\.js$': 'babel-jest',
+        '^.+\\.(vue)$': 'vue-jest',
       },
     },
     {
       displayName: 'test-utils',
       testMatch: ['<rootDir>/test/test-utils/**/.spec.js'],
       transform: {
-        '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
-        '.*\\.(vue)$': 'vue-jest',
+        '^.+\\.ts$': 'ts-jest',
+        '^.+\\.js$': 'babel-jest',
+        '^.+\\.(vue)$': 'vue-jest',
       },
     },
   ],
