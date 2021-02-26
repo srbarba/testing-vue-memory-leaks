@@ -1,4 +1,4 @@
-# 🔥 Testing jest + vue + third party libraries memory leaks
+# Checking jest + vue + third party libraries memory leaks 🔥🔥🔥
 
 I'm working in a big Vue project and we discovered that our test were experimenting some memory leaks.
 
@@ -52,5 +52,6 @@ For testing we use:
 You can check the rest of branches with different examples
 
 - example/basic-example-with_ts-jest
+- example/basic-example-with_vuetify (possible not confirmed memory-leak) 🔥
 
 > 📝 Remember to execute yarn before tests to update dependencies!
