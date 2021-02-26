@@ -50,5 +50,6 @@ For testing we use:
 You can check the rest of branches with different examples
 
 - example/basic-example-with_ts-jest
+- example/basic-example-with_vuetify (possible not confirmed memory-leak) 🔥
 
 > 📝 Remember to execute yarn before tests to update dependencies!
