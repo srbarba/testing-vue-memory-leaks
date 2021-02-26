@@ -1,7 +1,6 @@
 {
-  "name": "testing-library-vue-memory-leaks",
+  "name": "testing-vue-memory-leaks",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "JuanP Barba <jpbs92@hotmail.com>",
   "license": "MIT",
   "scripts": {
