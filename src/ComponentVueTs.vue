@@ -7,7 +7,7 @@ import Vue from 'vue'
 export default Vue.extend({
   props: {
     text: {
-      type: String,
+      type: String as Vue.PropType<string>,
       default: 'Dummy component',
     },
   },
