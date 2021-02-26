@@ -1,4 +1,4 @@
-# Testing jest + vue + third party libraries memory leaks
+# Testing jest + vue + third party libraries memory leaks 🔥🔥🔥
 
 I'm working in a big Vue project and we discovered that our test were experimenting some memory leaks.
 
@@ -46,3 +46,11 @@ For testing we use:
 - @vue/test-utils
 - @testing-library/vue
 - weak-napi (to make jest cli option `--detectLeaks` works)
+
+## Other examples
+
+You can check the rest of branches with different examples
+
+- example/basic-example-with_ts-jest
+
+> 📝 Remember to execute yarn before tests to update dependencies!
