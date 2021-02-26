@@ -1,4 +1,4 @@
-# Testing jest + vue + third party libraries memory leaks 🔥🔥🔥
+# 🔥 Testing jest + vue + third party libraries memory leaks
 
 I'm working in a big Vue project and we discovered that our test were experimenting some memory leaks.
 
