@@ -6,7 +6,9 @@ This repo is to try to reproduce and identify memory leaks in our original proje
 
 ## Current example
 
-In master branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with no more than `vue` and `typescript`.
+In this branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with no more than `vue` and `typescript`.
+
+For this example we used `ts-jest` to transpile typescript in jest.
 
 You can execute the scripts in `package.json` to check that everything works fine and there is no memory leaks with this example.
 
@@ -38,9 +40,9 @@ For testing we use:
 
 - jest
 - babel-jest
-- babel-core
-- @babel/preset-typescript
+- babel-core (required by vue-jest)
 - vue-jest
+- ts-jest
 - @vue/test-utils
 - @testing-library/vue
 - weak-napi (to make jest cli option `--detectLeaks` works)
