@@ -8,6 +8,10 @@ This repo is to try to reproduce and identify memory leaks in our original proje
 
 In this branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with `vue`, `typescript` and `vuetify`.
 
+[Vuetify requires be applyed globally](https://vuetifyjs.com/en/getting-started/unit-testing/#bootstrapping-vuetify), to Vue global object, so we tested adding the plugin in each render/mount execution and in a jest setup file.
+
+In this branch we have one more jest project, `with-setup`, where we apply `vuetify` plugin to `Vue`.
+
 You can execute the scripts in `package.json` to check there are no memory leaks.
 
 You can execute separated scripts like:
@@ -18,6 +22,9 @@ yarn tu:leaks
 
 ## @testing-library/vue
 yarn tl:leaks
+
+## with jest.setup.js
+yarn ws:leaks
 ```
 
 Or you can execute all together with:
