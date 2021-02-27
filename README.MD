@@ -38,7 +38,7 @@ yarn test:leaks
 
 We added a `docker.sh` executable to execute different cases in a `node:14.16` image.
 
-I can be extremely slow, but is ok for our test experiment.
+It can be extremely slow, but is ok for our test experiment.
 
 ## 🤔 Did you get memory leak in ComponentTs? 🔥🔥🔥
 
