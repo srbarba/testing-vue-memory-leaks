@@ -27,6 +27,12 @@ Or you can execute all together with:
 yarn test:leaks
 ```
 
+### Docker executable
+
+We added a `docker.sh` executable to execute different cases in a `node:14.16` image.
+
+It can be extremely slow, but is ok for our test experiment.
+
 ## Technologies involved
 
 In production code we have:
@@ -49,7 +55,7 @@ For testing we use:
 
 You can check the rest of branches with different examples
 
-- example/basic-example-with_ts-jest
-- example/basic-example-with_vuetify (possible not confirmed memory-leak) 🔥
+- [example/basic-example-with_ts-jest](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_ts-jest)
+- [example/basic-example-with_vuetify](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_vuetify)
 
 > 📝 Remember to execute yarn before tests to update dependencies!
