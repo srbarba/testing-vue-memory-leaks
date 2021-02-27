@@ -1,5 +1,8 @@
 <template>
-  <v-card>{{ text }}</v-card>
+  <v-card>
+    {{ text }}
+    <div>{{ $t('Hello world') }}</div>
+  </v-card>
 </template>
 
 <script>

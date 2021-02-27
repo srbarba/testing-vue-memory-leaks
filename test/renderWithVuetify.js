@@ -10,5 +10,6 @@ export function renderWithVuetify(
   callback = undefined
 ) {
   const vuetify = renderOptions.vuetify || new Vuetify()
-  return render(component, { ...renderOptions, vuetify }, callback)
+  const mocks = { ...renderOptions.mocks, $t: (value) => value }
+  return render(component, { ...renderOptions, mocks, vuetify }, callback)
 }

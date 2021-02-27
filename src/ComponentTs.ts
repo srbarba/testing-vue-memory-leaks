@@ -8,6 +8,6 @@ export default Vue.extend({
     },
   },
   render(h) {
-    return h('v-card', this.text)
+    return h('v-card', [this.text, h('div', this.$t('Hello world').toString())])
   },
 })

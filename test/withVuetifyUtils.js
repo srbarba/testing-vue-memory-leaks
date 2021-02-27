@@ -5,7 +5,6 @@ import Vuetify from 'vuetify'
 export function mountWithVuetify(component, mountOptions = {}) {
   const localVue = mountOptions.localVue || createLocalVue()
   const vuetify = mountOptions.vuetify || new Vuetify()
-
   return mount(component, { ...mountOptions, localVue, vuetify })
 }
 
