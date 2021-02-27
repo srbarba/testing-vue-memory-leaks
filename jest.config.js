@@ -1,9 +1,9 @@
 module.exports = {
-  rootDir: '.',
+  rootDir: process.cwd(),
   projects: [
     {
       displayName: 'testing-library',
-      testMatch: ['<rootDir>/test/testing-library/**/.spec.js'],
+      testMatch: ['<rootDir>/test/testing-library/**/*.spec.js'],
       transform: {
         '^.+\\.ts$': 'ts-jest',
         '^.+\\.js$': 'babel-jest',
@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       displayName: 'test-utils',
-      testMatch: ['<rootDir>/test/test-utils/**/.spec.js'],
+      testMatch: ['<rootDir>/test/test-utils/**/*.spec.js'],
       transform: {
         '^.+\\.ts$': 'ts-jest',
         '^.+\\.js$': 'babel-jest',
