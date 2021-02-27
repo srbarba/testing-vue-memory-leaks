@@ -34,6 +34,12 @@ Or you can execute all together with:
 yarn test:leaks
 ```
 
+### Docker executable
+
+We added a `docker.sh` executable to execute different cases in a `node:14.16` image.
+
+I can be extremely slow, but is ok for our test experiment.
+
 ## 🤔 Did you get memory leak in ComponentTs? 🔥🔥🔥
 
 We found that `test/testing-library/ComponentTs.spec.js` fails in memory leak error in arbitrary way.
@@ -41,6 +47,12 @@ We found that `test/testing-library/ComponentTs.spec.js` fails in memory leak er
 It was happening about 1 of 30 to 100 executions. It was impossible to determine a realistic way to analyze it.
 
 We will try in other environments to check if it happens more consistently.
+
+### Edited
+
+We test it in different environments and with differente Docker images and the issue has disappeared.
+
+Maybe it was something puntual in the developer's machine 😇
 
 ## Technologies involved
 
