@@ -1,7 +1,7 @@
-import { renderWithVuetify } from '../renderWithVuetify'
-import ComponentJs from '../../src/ComponentJs'
-import * as userState from '../../src/state/userState'
-import { UserMother } from '../UserMother'
+import { mountWithVuetify, renderWithVuetify } from '../../withVuetifyUtils'
+import ComponentJs from '../../../src/ComponentJs'
+import * as userState from '../../../src/state/userState'
+import { UserMother } from '../../UserMotherWithoutFaker'
 
 describe('ComponentJs', () => {
   beforeEach(() => {
@@ -9,7 +9,7 @@ describe('ComponentJs', () => {
   })
 
   it('renders correctly', () => {
-    const wrapper = renderWithVuetify(ComponentJs)
+    const wrapper = mountWithVuetify(ComponentJs)
     expect(wrapper.html()).toMatchSnapshot()
   })
 
@@ -29,7 +29,7 @@ describe('ComponentJs', () => {
     })
 
     it('renders correctly', () => {
-      const wrapper = renderWithVuetify(ComponentJs)
+      const wrapper = mountWithVuetify(ComponentJs)
       expect(wrapper.html()).toMatchSnapshot()
     })
 

@@ -1,7 +1,7 @@
-import { renderWithVuetify } from '../renderWithVuetify'
-import ComponentJs from '../../src/ComponentJs'
-import * as userState from '../../src/state/userState'
-import { UserMother } from '../UserMother'
+import { renderWithVuetify } from '../../renderWithVuetify'
+import ComponentJs from '../../../src/ComponentJs'
+import * as userState from '../../../src/state/userState'
+import { UserMother } from '../../UserMotherWithoutFaker'
 
 describe('ComponentJs', () => {
   beforeEach(() => {

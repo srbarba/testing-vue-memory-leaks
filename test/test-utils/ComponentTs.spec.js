@@ -1,7 +1,7 @@
 import { mountWithVuetify } from '../mountWithVuetify'
 import ComponentTs from '../../src/ComponentTs'
 import * as userState from '../../src/state/userState'
-import { UserMother } from '../UserMotherWithoutFaker'
+import { UserMother } from '../UserMother'
 
 describe('ComponentTs', () => {
   beforeEach(() => {
@@ -40,6 +40,17 @@ describe('ComponentTs', () => {
         },
       })
       expect(wrapper.html()).toMatchSnapshot()
+    })
+  })
+
+  describe('given random user name', () => {
+    it('renders correctly', () => {
+      const user = UserMother.random().build()
+      userState.computedUserName.set(user.name)
+
+      const wrapper = mountWithVuetify(ComponentTs)
+
+      expect(wrapper.html()).toEqual(expect.stringContaining(user.name))
     })
   })
 })

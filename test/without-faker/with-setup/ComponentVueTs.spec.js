@@ -1,20 +1,20 @@
-import { renderWithVuetify } from '../renderWithVuetify'
-import ComponentJs from '../../src/ComponentJs'
-import * as userState from '../../src/state/userState'
-import { UserMother } from '../UserMother'
+import { mountWithVuetify, renderWithVuetify } from '../../withVuetifyUtils'
+import ComponentVueTs from '../../../src/ComponentVueTs.vue'
+import * as userState from '../../../src/state/userState'
+import { UserMother } from '../../UserMotherWithoutFaker'
 
-describe('ComponentJs', () => {
+describe('ComponentVueTs', () => {
   beforeEach(() => {
     userState.reset()
   })
 
   it('renders correctly', () => {
-    const wrapper = renderWithVuetify(ComponentJs)
+    const wrapper = mountWithVuetify(ComponentVueTs)
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('renders correctly with props', () => {
-    const wrapper = renderWithVuetify(ComponentJs, {
+    const wrapper = renderWithVuetify(ComponentVueTs, {
       propsData: {
         text: 'My dummy Component',
       },
@@ -29,12 +29,12 @@ describe('ComponentJs', () => {
     })
 
     it('renders correctly', () => {
-      const wrapper = renderWithVuetify(ComponentJs)
+      const wrapper = mountWithVuetify(ComponentVueTs)
       expect(wrapper.html()).toMatchSnapshot()
     })
 
     it('renders correctly with props', () => {
-      const wrapper = renderWithVuetify(ComponentJs, {
+      const wrapper = renderWithVuetify(ComponentVueTs, {
         propsData: {
           text: 'My dummy Component',
         },
@@ -48,7 +48,7 @@ describe('ComponentJs', () => {
       const user = UserMother.random().build()
       userState.computedUserName.set(user.name)
 
-      const wrapper = renderWithVuetify(ComponentJs)
+      const wrapper = renderWithVuetify(ComponentVueTs)
 
       expect(wrapper.html()).toEqual(expect.stringContaining(user.name))
     })

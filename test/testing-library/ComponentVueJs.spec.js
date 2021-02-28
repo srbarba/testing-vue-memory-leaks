@@ -42,4 +42,15 @@ describe('ComponentVueJs', () => {
       expect(wrapper.html()).toMatchSnapshot()
     })
   })
+
+  describe('given random user name', () => {
+    it('renders correctly', () => {
+      const user = UserMother.random().build()
+      userState.computedUserName.set(user.name)
+
+      const wrapper = renderWithVuetify(ComponentVueJs)
+
+      expect(wrapper.html()).toEqual(expect.stringContaining(user.name))
+    })
+  })
 })

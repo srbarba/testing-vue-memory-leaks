@@ -4,15 +4,17 @@
   "author": "JuanP Barba <jpbs92@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --selectProjects test-utils testing-library with-setup",
     "test:cov": "jest --collect-coverage",
     "test:leaks": "yarn test --runInBand --no-cache --detectLeaks --logHeapUsage",
-    "test-utils": "yarn test --selectProjects test-utils",
+    "test-utils": "yarn jest --selectProjects test-utils",
     "tu:leaks": "yarn test-utils --runInBand --no-cache --detectLeaks --logHeapUsage",
-    "testing-library": "yarn test --selectProjects testing-library",
+    "testing-library": "yarn jest --selectProjects testing-library",
     "tl:leaks": "yarn testing-library --runInBand --no-cache --detectLeaks --logHeapUsage",
-    "with-setup": "yarn test --selectProjects with-setup",
-    "ws:leaks": "yarn with-setup --runInBand --no-cache --detectLeaks --logHeapUsage"
+    "with-setup": "yarn jest --selectProjects with-setup",
+    "ws:leaks": "yarn with-setup --runInBand --no-cache --detectLeaks --logHeapUsage",
+    "without-faker": "yarn jest --selectProjects without-faker",
+    "wf:leaks": "yarn without-faker --runInBand --no-cache --detectLeaks --logHeapUsage"
   },
   "devDependencies": {
     "@babel/core": "^7.13.1",

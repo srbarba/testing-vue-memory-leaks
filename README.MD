@@ -4,15 +4,16 @@ I'm working in a big Vue project and we discovered that our test were experiment
 
 This repo is to try to reproduce and identify memory leaks in our original project.
 
-## Current example
+## Current example (spoiler alert: This branch has memory leaks 🤯)
 
-In this branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with `vue`, `typescript` and `vuetify` + a simple mock of i18n.
+In this branch we combined all the next examples with the usage of [`faker`](https://github.com/Marak/faker.js)
 
-[Vuetify requires be applyed globally](https://vuetifyjs.com/en/getting-started/unit-testing/#bootstrapping-vuetify), to Vue global object, so we tested adding the plugin in each render/mount execution and in a jest setup file.
+- [example/basic-example-with_ts-jest](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_ts-jest)
+- [example/basic-example-with_vuetify](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_vuetify)
+- [example/vuetify_with_i18n](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/vuetify_with_i18n)
+- [example/global_vue_observable_file](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/global_vue_observable_file)
 
-In this branch we have one more jest project, `with-setup`, where we apply `vuetify` plugin to `Vue` and global i18n mock for `@vue/test-utils`.
-
-You can execute the scripts in `package.json` to check there are no memory leaks.
+You can execute the scripts in `package.json` to check each case.
 
 You can execute separated scripts like:
 
@@ -25,6 +26,9 @@ yarn tl:leaks
 
 ## with jest.setup.js
 yarn ws:leaks
+
+## without faker
+yarn wf:leaks
 ```
 
 Or you can execute all together with:
@@ -40,6 +44,26 @@ We added a `docker.sh` executable to execute different cases in a `node:14.16` i
 
 It can be extremely slow, but is ok for our test experiment.
 
+## Results
+
+If you execute `yarn test:leaks` you can see how there are some errors of memory leak in this branch.
+
+You can try now to execute `yarn wf:leaks`. Surprise! there are no errors 🎉🎉
+
+### What is the difference?
+
+In both cases we use an [`object mother`](https://martinfowler.com/bliki/ObjectMother.html) for test data creation.
+
+We are using [`faker`](https://github.com/Marak/faker.js) for data generation in our tests under `yarn test:leaks` command.
+
+For `yarn wf:leaks` command, `Math.random` to get random results of data from an static json file.
+
+So, the problem seems to be [`faker`](https://github.com/Marak/faker.js). In fact, the library seems to have an opened issue related with memory leaks: https://github.com/Marak/faker.js/issues/902
+
+### Conclusions
+
+If you are going to use [`faker`](https://github.com/Marak/faker.js), you should check you are safe of memory leaks.
+
 ## Technologies involved
 
 In production code we have:
@@ -47,9 +71,11 @@ In production code we have:
 - typescript
 - vue
 - vuetify
+- Vue.observable
 
 For testing we use:
 
+- faker
 - jest
 - babel-jest
 - babel-core (required by vue-jest)
@@ -66,5 +92,7 @@ You can check the rest of branches with different examples
 - [example/basic-example-with_ts-jest](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_ts-jest)
 - [example/basic-example-with_vuetify](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_vuetify)
 - [example/vuetify_with_i18n](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/vuetify_with_i18n)
+- [example/global_vue_observable_file](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/global_vue_observable_file)
+- [example/with_faker](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_faker) 🔥🔥🔥
 
 > 📝 Remember to execute yarn before tests to update dependencies!
