@@ -6,8 +6,6 @@ This repo is to try to reproduce and identify memory leaks in our original proje
 
 ## Current example
 
----
-
 In master branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with no more than `vue` and `typescript`.
 
 You can execute the scripts in `package.json` to check that everything works fine and there is no memory leaks with this example.
@@ -37,8 +35,6 @@ It can be extremely slow, but is ok for our test experiment.
 
 ## Technologies involved
 
----
-
 In production code we have:
 
 - typescript
@@ -57,8 +53,6 @@ For testing we use:
 
 ## Other examples
 
----
-
 You can check the rest of branches with different examples
 
 - [example/basic-example-with_ts-jest](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_ts-jest)
@@ -76,8 +70,6 @@ You can check the rest of branches with different examples
 - Luxon example
 
 ## Detected memory leaks
-
----
 
 By the moment, we detected memory leaks in:
 
