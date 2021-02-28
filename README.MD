@@ -6,6 +6,8 @@ This repo is to try to reproduce and identify memory leaks in our original proje
 
 ## Current example
 
+---
+
 In master branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with no more than `vue` and `typescript`.
 
 You can execute the scripts in `package.json` to check that everything works fine and there is no memory leaks with this example.
@@ -35,6 +37,8 @@ It can be extremely slow, but is ok for our test experiment.
 
 ## Technologies involved
 
+---
+
 In production code we have:
 
 - typescript
@@ -53,6 +57,8 @@ For testing we use:
 
 ## Other examples
 
+---
+
 You can check the rest of branches with different examples
 
 - [example/basic-example-with_ts-jest](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_ts-jest)
@@ -60,11 +66,23 @@ You can check the rest of branches with different examples
 - [example/vuetify_with_i18n](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/vuetify_with_i18n)
 - [example/global_vue_observable_file](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/global_vue_observable_file)
 - [example/with_faker](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_faker) 🔥🔥🔥
+- [example/with_chance](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_chance)
 
 > 📝 Remember to execute yarn before tests to update dependencies!
 
+### Pending examples
+
+- Vuex mock example
+- Luxon example
+
 ## Detected memory leaks
+
+---
 
 By the moment, we detected memory leaks in:
 
-- [example/with_faker](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_faker): Due to [`faker`](https://github.com/Marak/faker.js) library.
+### [example/with_faker](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_faker)
+
+Due to [`faker`](https://github.com/Marak/faker.js) library.
+
+We did not already checked full [`chance`](https://github.com/chancejs/chancejs) library, but it can be an alternative to `faker`. You can check: [example/with_chance](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_chance).
