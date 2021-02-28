@@ -1,7 +1,13 @@
 import { mountWithVuetify } from '../mountWithVuetify'
 import ComponentTs from '../../src/ComponentTs'
+import * as userState from '../../src/state/userState'
+import { UserMother } from '../UserMotherWithoutFaker'
 
 describe('ComponentTs', () => {
+  beforeEach(() => {
+    userState.reset()
+  })
+
   it('renders correctly', () => {
     const wrapper = mountWithVuetify(ComponentTs)
     expect(wrapper.html()).toMatchSnapshot()
@@ -14,5 +20,26 @@ describe('ComponentTs', () => {
       },
     })
     expect(wrapper.html()).toMatchSnapshot()
+  })
+
+  describe('given user name', () => {
+    beforeEach(() => {
+      const user = UserMother.create()
+      userState.computedUserName.set(user.name)
+    })
+
+    it('renders correctly', () => {
+      const wrapper = mountWithVuetify(ComponentTs)
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('renders correctly with props', () => {
+      const wrapper = mountWithVuetify(ComponentTs, {
+        propsData: {
+          text: 'My dummy Component',
+        },
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
   })
 })

@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import { config } from '@vue/test-utils'
+import { i18nMock } from './test/i18nMock'
 
 Vue.use(Vuetify)
 
 if (config && config.mocks) {
-  config.mocks.$t = (msg) => msg
-  config.mocks.$tc = (msg) => msg
+  config.mocks.$t = i18nMock
+  config.mocks.$tc = i18nMock
   config.mocks.$i18n = {
     locale: 'EN',
     locales: [

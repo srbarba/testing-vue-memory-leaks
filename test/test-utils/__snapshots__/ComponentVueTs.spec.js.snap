@@ -1,15 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ComponentVueTs given user name renders correctly 1`] = `
+<div class="v-card v-sheet theme--light">
+  Dummy component
+  <div>Hello John Doe</div>
+</div>
+`;
+
+exports[`ComponentVueTs given user name renders correctly with props 1`] = `
+<div class="v-card v-sheet theme--light">
+  My dummy Component
+  <div>Hello John Doe</div>
+</div>
+`;
+
 exports[`ComponentVueTs renders correctly 1`] = `
 <div class="v-card v-sheet theme--light">
   Dummy component
-  <div>Hello world</div>
+  <div>Hello </div>
 </div>
 `;
 
 exports[`ComponentVueTs renders correctly with props 1`] = `
 <div class="v-card v-sheet theme--light">
   My dummy Component
-  <div>Hello world</div>
+  <div>Hello </div>
 </div>
 `;

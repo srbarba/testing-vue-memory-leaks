@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ComponentTs given user name renders correctly 1`] = `
+<div class="v-card v-sheet theme--light">Dummy component<div>Hello John Doe</div>
+</div>
+`;
+
+exports[`ComponentTs given user name renders correctly with props 1`] = `
+<div class="v-card v-sheet theme--light">My dummy Component<div>Hello John Doe</div>
+</div>
+`;
+
 exports[`ComponentTs renders correctly 1`] = `
-<div class="v-card v-sheet theme--light">Dummy component<div>Hello world</div>
+<div class="v-card v-sheet theme--light">Dummy component<div>Hello </div>
 </div>
 `;
 
 exports[`ComponentTs renders correctly with props 1`] = `
-<div class="v-card v-sheet theme--light">My dummy Component<div>Hello world</div>
+<div class="v-card v-sheet theme--light">My dummy Component<div>Hello </div>
 </div>
 `;
