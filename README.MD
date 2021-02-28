@@ -64,6 +64,8 @@ So, the problem seems to be [`faker`](https://github.com/Marak/faker.js). In fac
 
 If you are going to use [`faker`](https://github.com/Marak/faker.js), you should check you are safe of memory leaks.
 
+You can try [`chance`](https://github.com/chancejs/chancejs) if you still want to use fake data generator.
+
 ## Technologies involved
 
 In production code we have:
@@ -94,5 +96,6 @@ You can check the rest of branches with different examples
 - [example/vuetify_with_i18n](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/vuetify_with_i18n)
 - [example/global_vue_observable_file](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/global_vue_observable_file)
 - [example/with_faker](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_faker) 🔥🔥🔥
+- [example/with_chance](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_chance)
 
 > 📝 Remember to execute yarn before tests to update dependencies!
