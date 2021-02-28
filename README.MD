@@ -69,6 +69,7 @@ You can check the rest of branches with different examples
 - Vuex mock example
 - Luxon example
 - Window localStorage
+- randexp
 
 ## Detected memory leaks
 
