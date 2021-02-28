@@ -79,5 +79,6 @@ You can check the rest of branches with different examples
 
 - [example/basic-example-with_ts-jest](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_ts-jest)
 - [example/basic-example-with_vuetify](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_vuetify)
+- [example/vuetify_with_i18n](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/vuetify_with_i18n)
 
 > 📝 Remember to execute yarn before tests to update dependencies!
