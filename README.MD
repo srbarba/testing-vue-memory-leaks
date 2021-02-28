@@ -68,5 +68,6 @@ You can check the rest of branches with different examples
 - [example/vuetify_with_i18n](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/vuetify_with_i18n)
 - [example/global_vue_observable_file](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/global_vue_observable_file)
 - [example/with_faker](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_faker) 🔥🔥🔥
+- [example/with_chance](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_chance)
 
 > 📝 Remember to execute yarn before tests to update dependencies!
