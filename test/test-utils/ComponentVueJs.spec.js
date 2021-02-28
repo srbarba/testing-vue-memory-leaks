@@ -1,7 +1,7 @@
 import { mountWithVuetify } from '../mountWithVuetify'
 import ComponentVueJs from '../../src/ComponentVueJs.vue'
 import * as userState from '../../src/state/userState'
-import { UserMother } from '../UserMotherWithoutFaker'
+import { UserMother } from '../UserMother'
 
 describe('ComponentVueJs', () => {
   beforeEach(() => {

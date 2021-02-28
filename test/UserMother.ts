@@ -1,6 +1,6 @@
 import type { User } from '../src/types/User'
-import faker from 'faker'
 import deepmerge from 'deepmerge'
+import users from './users.json'
 
 export class UserMother {
   props: User
@@ -14,10 +14,7 @@ export class UserMother {
   }
 
   static random() {
-    return new UserMother({
-      id: faker.random.number(),
-      name: faker.name.findName(),
-    })
+    return new UserMother(users[Math.floor(Math.random() * 4)])
   }
 
   static default = {
