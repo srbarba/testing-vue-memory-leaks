@@ -1,5 +1,5 @@
 import type { User } from '../src/types/User'
-import faker from 'faker'
+import Chance from 'chance'
 import deepmerge from 'deepmerge'
 
 export class UserMother {
@@ -14,9 +14,10 @@ export class UserMother {
   }
 
   static random() {
+    var chance = new Chance()
     return new UserMother({
-      id: faker.random.number(),
-      name: faker.name.findName(),
+      id: chance.integer(),
+      name: chance.name(),
     })
   }
 
