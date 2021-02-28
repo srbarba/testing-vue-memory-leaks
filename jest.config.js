@@ -1,5 +1,4 @@
 module.exports = {
-  rootDir: process.cwd(),
   projects: [
     {
       displayName: 'testing-library',

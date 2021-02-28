@@ -1,4 +1,4 @@
-import { mountWithVuetify } from '../withVuetifyUtils'
+import { mountWithVuetify, renderWithVuetify } from '../withVuetifyUtils'
 import ComponentTs from '../../src/ComponentTs'
 
 describe('ComponentTs', () => {
@@ -8,7 +8,7 @@ describe('ComponentTs', () => {
   })
 
   it('renders correctly with props', () => {
-    const wrapper = mountWithVuetify(ComponentTs, {
+    const wrapper = renderWithVuetify(ComponentTs, {
       propsData: {
         text: 'My dummy Component',
       },

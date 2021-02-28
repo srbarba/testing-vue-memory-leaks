@@ -6,11 +6,11 @@ This repo is to try to reproduce and identify memory leaks in our original proje
 
 ## Current example
 
-In this branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with `vue`, `typescript` and `vuetify`.
+In this branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with `vue`, `typescript` and `vuetify` + a simple mock of i18n.
 
 [Vuetify requires be applyed globally](https://vuetifyjs.com/en/getting-started/unit-testing/#bootstrapping-vuetify), to Vue global object, so we tested adding the plugin in each render/mount execution and in a jest setup file.
 
-In this branch we have one more jest project, `with-setup`, where we apply `vuetify` plugin to `Vue`.
+In this branch we have one more jest project, `with-setup`, where we apply `vuetify` plugin to `Vue` and global i18n mock for `@vue/test-utils`.
 
 You can execute the scripts in `package.json` to check there are no memory leaks.
 
@@ -40,20 +40,6 @@ We added a `docker.sh` executable to execute different cases in a `node:14.16` i
 
 It can be extremely slow, but is ok for our test experiment.
 
-## 🤔 Did you get memory leak in ComponentTs? 🔥🔥🔥
-
-We found that `test/testing-library/ComponentTs.spec.js` fails in memory leak error in arbitrary way.
-
-It was happening about 1 of 30 to 100 executions. It was impossible to determine a realistic way to analyze it.
-
-We will try in other environments to check if it happens more consistently.
-
-### Edited
-
-We test it in different environments and with differente Docker images and the issue has disappeared.
-
-Maybe it was something puntual in the developer's machine 😇
-
 ## Technologies involved
 
 In production code we have:
@@ -79,5 +65,6 @@ You can check the rest of branches with different examples
 
 - [example/basic-example-with_ts-jest](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_ts-jest)
 - [example/basic-example-with_vuetify](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/basic-example-with_vuetify)
+- [example/vuetify_with_i18n](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/vuetify_with_i18n)
 
 > 📝 Remember to execute yarn before tests to update dependencies!

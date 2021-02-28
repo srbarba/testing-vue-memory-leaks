@@ -1,9 +1,9 @@
-import { renderWithVuetify } from '../withVuetifyUtils'
+import { mountWithVuetify, renderWithVuetify } from '../withVuetifyUtils'
 import ComponentJs from '../../src/ComponentJs'
 
 describe('ComponentJs', () => {
   it('renders correctly', () => {
-    const wrapper = renderWithVuetify(ComponentJs)
+    const wrapper = mountWithVuetify(ComponentJs)
     expect(wrapper.html()).toMatchSnapshot()
   })
 
