@@ -12,9 +12,7 @@
     "testing-library": "yarn jest --selectProjects testing-library",
     "tl:leaks": "yarn testing-library --runInBand --no-cache --detectLeaks --logHeapUsage",
     "with-setup": "yarn jest --selectProjects with-setup",
-    "ws:leaks": "yarn with-setup --runInBand --no-cache --detectLeaks --logHeapUsage",
-    "without-faker": "yarn jest --selectProjects without-faker",
-    "wf:leaks": "yarn without-faker --runInBand --no-cache --detectLeaks --logHeapUsage"
+    "ws:leaks": "yarn with-setup --runInBand --no-cache --detectLeaks --logHeapUsage"
   },
   "devDependencies": {
     "@babel/core": "^7.13.1",
