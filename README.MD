@@ -67,7 +67,6 @@ You can check the rest of branches with different examples
 
 ### Pending examples
 
-- Vuex mock example
 - Luxon example
 - Window localStorage
 - randexp
