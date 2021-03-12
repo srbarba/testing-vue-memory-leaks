@@ -6,7 +6,7 @@ This repo is to try to reproduce and identify memory leaks in our original proje
 
 ## Current example
 
-In master branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with no more than `vue` and `typescript`.
+In master branch we created a basic example to test `@testing-library/vue` and `@vue/test-utils` with no more than `vue`, `typescript` and `vuex`.
 
 You can execute the scripts in `package.json` to check that everything works fine and there is no memory leaks with this example.
 
@@ -61,6 +61,7 @@ You can check the rest of branches with different examples
 - [example/global_vue_observable_file](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/global_vue_observable_file)
 - [example/with_faker](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_faker) 🔥🔥🔥
 - [example/with_chance](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_chance)
+- [example/with_vuex](https://github.com/srbarba/testing-vue-memory-leaks/tree/example/with_vuex)
 
 > 📝 Remember to execute yarn before tests to update dependencies!
 

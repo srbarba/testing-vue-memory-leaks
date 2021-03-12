@@ -1,13 +1,11 @@
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
 
 export default Vue.extend({
-  props: {
-    text: {
-      type: String as Vue.PropType<string>,
-      default: 'Dummy component',
-    },
+  computed: {
+    ...mapGetters(['userName']),
   },
   render(h) {
-    return h('div', this.text)
+    return h('div', `Hello, ${this.userName}`)
   },
 })

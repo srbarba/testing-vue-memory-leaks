@@ -1,15 +1,14 @@
 <template>
-  <div>{{ text }}</div>
+  <div>Hello, {{ userName }}</div>
 </template>
 
 <script>
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
+
 export default Vue.extend({
-  props: {
-    text: {
-      type: String,
-      default: 'Dummy component',
-    },
+  computed: {
+    ...mapGetters(['userName']),
   },
 })
 </script>

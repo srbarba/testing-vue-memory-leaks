@@ -1,17 +1,15 @@
-import { mount } from '@vue/test-utils'
+import Vuex from 'vuex'
+import { createLocalVue, mount } from '@vue/test-utils'
 import ComponentTs from '../../src/ComponentTs'
+import store from '../../src/store'
 
 describe('ComponentTs', () => {
   it('renders correctly', () => {
-    const wrapper = mount(ComponentTs)
-    expect(wrapper.html()).toMatchSnapshot()
-  })
-
-  it('renders correctly with props', () => {
+    const localVue = createLocalVue()
+    localVue.use(Vuex)
     const wrapper = mount(ComponentTs, {
-      propsData: {
-        text: 'My dummy Component',
-      },
+      localVue,
+      store: new Vuex.Store(store),
     })
     expect(wrapper.html()).toMatchSnapshot()
   })

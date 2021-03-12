@@ -1,11 +1,11 @@
-export default {
-  props: {
-    text: {
-      type: String,
-      default: 'Dummy component',
-    },
+import Vue from 'vue'
+import { mapGetters } from 'vuex'
+
+export default Vue.extend({
+  computed: {
+    ...mapGetters(['userName']),
   },
   render(h) {
-    return h('div', this.text)
+    return h('div', `Hello, ${this.userName}`)
   },
-}
+})

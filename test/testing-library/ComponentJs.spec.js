@@ -1,18 +1,10 @@
 import { render } from '@testing-library/vue'
 import ComponentJs from '../../src/ComponentJs'
+import store from '../../src/store'
 
 describe('ComponentJs', () => {
   it('renders correctly', () => {
-    const wrapper = render(ComponentJs)
-    expect(wrapper.html()).toMatchSnapshot()
-  })
-
-  it('renders correctly with props', () => {
-    const wrapper = render(ComponentJs, {
-      propsData: {
-        text: 'My dummy Component',
-      },
-    })
+    const wrapper = render(ComponentJs, { store })
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

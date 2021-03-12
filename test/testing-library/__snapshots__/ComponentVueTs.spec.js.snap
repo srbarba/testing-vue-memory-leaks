@@ -1,5 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentVueTs renders correctly 1`] = `"<div>Dummy component</div>"`;
-
-exports[`ComponentVueTs renders correctly with props 1`] = `"<div>My dummy Component</div>"`;
+exports[`ComponentVueTs renders correctly 1`] = `"<div>Hello, </div>"`;

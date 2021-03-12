@@ -25,5 +25,8 @@
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.12",
     "weak-napi": "^2.0.2"
+  },
+  "dependencies": {
+    "vuex": "^3.6.2"
   }
 }
